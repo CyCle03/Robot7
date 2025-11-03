@@ -9,6 +9,7 @@ int main()
 	for (int i = 0; i < 100; i++)//for(int i = 1; i <= 100 ; i++) sum += i;
 	{
 		sum += i + 1;
+		//printf("sum : %d, i ; %d\n", sum, i + 1);
 	}
 	
 	printf("1 ~ 100의 누적 합 : %d\n", sum);
