@@ -6,6 +6,7 @@ void print_char(char ch, int count);
 int main()
 {
 	print_char('@', 5);
+	printf("\n");
 
 	return 0;
 }
