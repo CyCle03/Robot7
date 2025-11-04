@@ -1,0 +1,46 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+//1. return (x), argument(x)
+void myPrint()
+{
+	printf("myPrint()\n");
+}
+
+//2. return(o), argument(x)
+char myChar()
+{
+	return 'Z';
+}
+
+//3. return(x), argumnet(x)
+void myInt(int a)
+{
+	printf("%d\n", a);
+}
+
+//4. return(o), argument(o)
+int myInt2(int b)
+{
+	return b;
+}
+
+//5. return(o), argument(o) - 다수
+int sum(int a, int b, int c)
+{
+	int result = a + b + c;
+	return result;
+}
+
+int main()
+{
+	myPrint();
+	char c = myChar();
+	printf("%d\n", c);
+	myInt(4550);
+	int result = myInt2(7777);
+	printf("%d\n", result);
+	printf("%d\n", sum(100, 200, 300));
+
+	return 0;
+}
