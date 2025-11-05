@@ -10,21 +10,23 @@ int main()
 	for(int i = 0; i < 5; i++)
 	{
 		scanf("%d", &score[i]);
+		total += score[i];
+		printf("%5d", score[i]);
 	}
 
 	//total = score[0] + score[1] + score[2] + score[3] + score[4];
-	for (int i = 0; i < 5; i++)
-	{
-		//total = total + score[i];
-		total += score[i];
-	}
+	//for (int i = 0; i < 5; i++)
+	//{
+	//	//total = total + score[i];
+	//	total += score[i];
+	//}
 
 	avg = total / 5.0;
 
-	for (int i = 0; i < 5; i++)
+	/*for (int i = 0; i < 5; i++)
 	{
 		printf("%5d", score[i]);
-	}
+	}*/
 	printf("\n");
 
 	printf("평균 : % .1lf\n", avg);
