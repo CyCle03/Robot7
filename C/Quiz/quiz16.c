@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+#include<limits.h>
 
 void print_max(int* arr);
 
@@ -14,7 +15,7 @@ int main()
 
 void print_max(int* arr)
 {
-	int max = 0;
+	int max = INT_MIN;
 
 	for (int i = 0; i < 7; i++)
 	{
