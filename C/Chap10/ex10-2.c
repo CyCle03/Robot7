@@ -7,9 +7,9 @@ int main()
 	int* pa; 
 	pa = ary;
 	
-	*pa = 10;
-	*(pa + 1) = 20;
-	pa[2] = pa[0] + pa[1];
+	*pa = 10;//ary[0]
+	*(pa + 1) = 20;//ary[1]
+	pa[2] = pa[0] + pa[1];//ary[2] = ary[0] + ary[1]
 
 	for (int i = 0; i < 3; i++)
 	{
