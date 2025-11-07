@@ -31,7 +31,7 @@ void auto_func()
 
 void static_func()
 {
-	static int a;
+	static int a;//한 번 컴파일러가 메모리를 할당 하고 나면 또 0으로 초기화 되지 않는다.
 
 	a++;
 	printf("%d\n", a);
