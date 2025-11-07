@@ -9,7 +9,7 @@ int main()
 	double avg = 0.0;
 
 	//scanf("%d", &kor);
-	printf("¼¼ °ú¸ñÀÇ ¼ºÀûÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä. : ");
+	printf("ì„¸ ê³¼ëª©ì˜ ì„±ì ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”. : ");
 
 	//scanf("%d", &score[0]);
 	//scanf("%d", &score[1]);
@@ -25,17 +25,17 @@ int main()
 
 	printf("score[0] : %d, score[1] : %d, score[2] : %d\n", score[0], score[1], score[2]);
 
-	//ÃÑÁ¡
+	//ì´ì 
 	/*int total = score[0] + score[1] + score[2];*/
-	//int total = 0; //Áö¿ªº¯¼ö´Â ÃÊ±âÈ­ ÇÏÁö ¾ÊÀ¸¸é ¾²·¹±â °ªÀÌ µé¾î°¡´Â ¹®Á¦°¡ ÀÖ´Ù.
+	//int total = 0; //ì§€ì—­ë³€ìˆ˜ëŠ” ì´ˆê¸°í™” í•˜ì§€ ì•Šìœ¼ë©´ ì“°ë ˆê¸° ê°’ì´ ë“¤ì–´ê°€ëŠ” ë¬¸ì œê°€ ìˆë‹¤.
 	//for (int i = 0; i < 3; i++)
 	//{
 	//	total += score[i];
 	//}
 
-	printf("ÃÑÁ¡ : %d\n", total);
+	printf("ì´ì  : %d\n", total);
 	avg = (double)total / 3;
-	printf("Æò±Õ : %.2lf\n", avg);
+	printf("í‰ê·  : %.2lf\n", avg);
 
 	return 0;
 }
