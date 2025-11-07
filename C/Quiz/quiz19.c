@@ -7,7 +7,7 @@ int main()
 	char str[80];
 
 	printf("뒤집어서 출력할 문자열을 입력해주세요 : ");
-	fgets(str, 80, stdin);
+	fgets(str, sizeof(str), stdin);
 
 	for (int i = strlen(str); i >= 0 ; i--)
 	{
