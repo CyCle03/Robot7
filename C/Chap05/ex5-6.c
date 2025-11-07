@@ -23,7 +23,7 @@ int main()
 
 	printf("m : %d\n", m);
 
-	//if, else if, else ±¸¹®À¸·Î ¹Ù²Ù±â.
+	//if, else if, else Â±Â¸Â¹Â®Ã€Â¸Â·ÃŽ Â¹Ã™Â²Ã™Â±Ã¢.
 
 	if (rank == 1)
 	{
