@@ -5,22 +5,22 @@ int main()
 {
 	int price = 0, pay = 0, change = 0;
 
-	printf("¹°°Ç °¡°İ: ");
+	printf("ë¬¼ê±´ ê°€ê²©: ");
 	scanf("%d", &price);
-	printf("ÁöºÒ ±İ¾×: ");
+	printf("ì§€ë¶ˆ ê¸ˆì•¡: ");
 	scanf("%d", &pay);
 
 	change = pay - price;
 
-	printf("°Å½º¸§µ·: %d¿ø\n", change);
+	printf("ê±°ìŠ¤ë¦„ëˆ: %dì›\n", change);
 
-	printf("1000¿ø %d°³\n", (change / 1000));
+	printf("1000ì› %dê°œ\n", (change / 1000));
 	change %= 1000;
 
-	printf("500¿ø %d°³\n", (change / 500));
+	printf("500ì› %dê°œ\n", (change / 500));
 	change %= 500;
 
-	printf("100¿ø %d°³\n", (change / 100));
+	printf("100ì› %dê°œ\n", (change / 100));
 	change %= 100;
 
 	return 0;
