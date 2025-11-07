@@ -6,10 +6,10 @@ int main()
 	int a = 10, b = 20, result;
 
 	result = (a > b) ? a : b;
-	printf("Å« °ª : %d\n", result);
+	printf("Ã…Â« Â°Âª : %d\n", result);
 
 	result = (a < b) ? a : b;
-	printf("ÀÛÀº °ª : %d\n", result);
+	printf("Ã€Ã›Ã€Âº Â°Âª : %d\n", result);
 
 	if (a > b)
 	{
@@ -19,7 +19,7 @@ int main()
 	{
 		result = b;
 	}
-	printf("Å« °ª : %d\n", result);
+	printf("Ã…Â« Â°Âª : %d\n", result);
 
 	return 0;
 }
