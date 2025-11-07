@@ -7,7 +7,7 @@ int main()
 	int total = 0;
 	double avg = 0.0;
 
-	printf("¼¼ °ú¸ñÀÇ ¼ºÀûÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.: ");
+	printf("ì„¸ ê³¼ëª©ì˜ ì„±ì ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.: ");
 	for (int i = 0; i < 3; i++)
 	{
 		scanf("%d", &score[i]);
@@ -18,7 +18,7 @@ int main()
 
 	avg = (double)total / 3;
 
-	printf("ÃÑÁ¡: %d, Æò±Õ: %.2lf\n", total, avg);
+	printf("ì´ì : %d, í‰ê· : %.2lf\n", total, avg);
 
 	return 0;
 }
