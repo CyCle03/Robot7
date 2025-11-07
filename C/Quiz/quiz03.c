@@ -5,16 +5,16 @@ int main()
 {
 	int number;
 
-	printf("È¦,Â¦À» ÆÇº°ÇÒ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+	printf("í™€,ì§ì„ íŒë³„í•  ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 	scanf("%d", &number);
 
 	if (number % 2 != 0)
 	{
-		printf("È¦¼ö\n");
+		printf("í™€ìˆ˜\n");
 	}
 	else
 	{
-		printf("Â¦¼ö\n");
+		printf("ì§ìˆ˜\n");
 	}
 
 
