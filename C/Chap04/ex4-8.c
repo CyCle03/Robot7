@@ -8,10 +8,10 @@ int main()
 
 	result = ((double)a / (double)b);
 	printf("a = %d, b = %d\n", a, b);
-	printf("a / b�� ��� : %.1lf\n", result);
+	printf("a / bÀÇ °á°ú : %.1lf\n", result);
 
 	a = (int)result;
-	printf("(int) %.1lf�� ��� : %d\n", result, a);
+	printf("(int) %.1lfÀÇ °á°ú : %d\n", result, a);
 
 	return 0;
 }
