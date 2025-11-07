@@ -5,28 +5,28 @@ int main()
 {
 	int score1 = 0, score2 = 0, score3 = 0;
 
-	printf("Ã¶¼ö : ");
+	printf("ì² ìˆ˜ : ");
 	scanf("%d", &score1);
 
-	printf("¿µÈñ : ");
+	printf("ì˜í¬ : ");
 	scanf("%d", &score2);
 
-	printf("¹Î¼ö : ");
+	printf("ë¯¼ìˆ˜ : ");
 	scanf("%d", &score3);
 
-	printf("1µîÀº ");
+	printf("1ë“±ì€ ");
 
 	if (score1 >= score2 && score1 >= score3)
 	{
-		printf("Ã¶¼ö %dÁ¡", score1);
+		printf("ì² ìˆ˜ %dì ", score1);
 	}
 	else if (score2 >= score3)
 	{
-		printf("¿µÈñ %dÁ¡", score2);
+		printf("ì˜í¬ %dì ", score2);
 	}
 	else
 	{
-		printf("¹Î¼ö %dÁ¡", score3);
+		printf("ë¯¼ìˆ˜ %dì ", score3);
 	}
 
 	return 0;
