@@ -8,7 +8,7 @@ int main()
 	int cnt = 0;
 
 	printf("모음의 개수를 셀 영어를 소문자로 입력하세요. : ");
-	fgets(str, 80, stdin);
+	fgets(str, sizeof(str), stdin);
 
 	for (int i = 0; i < strlen(str) ; i++)
 	{
