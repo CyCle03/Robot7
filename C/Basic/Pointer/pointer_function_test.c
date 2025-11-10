@@ -1,5 +1,5 @@
 //배열을 매개변수(인자값)로 전달하고
-//배열을 return 받아서 사용해 보았다!!!
+//배열을 return 받아서 사용해 보았다.
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
