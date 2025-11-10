@@ -8,7 +8,9 @@ int main()
 	//char ptr_arr[4][10];//문자열 배열 상수
 	//char* ptr_ary[4] = { "eagle", "tiger", "lion", "squirrel" };
 	char* ptr_ary[] = { "eagle", "tiger", "lion", "squirrel" };
+	
 	//char** ptr_ary = { "eagle", "tiger", "lion", "squirrel" };//error
+	char** ptr_ary3 = (char*[]){ "eagle", "tiger", "lion", "squirrel" };//(char*[])로 캐스팅 하면 가능하다.
 
 	int count = sizeof(ptr_ary)/ sizeof(ptr_ary[0]);//4
 
