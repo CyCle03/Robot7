@@ -12,7 +12,8 @@ int main()
 	{
 		printf("문자열을 입력하세요 : ");
 		fgets(temp, sizeof(temp), stdin);//gcc에는 gets가 없다.
-		str[i] = (char*)malloc(strlen(temp) + 1);//+1 '\n'문자
+		//str[i] = (char*)malloc(strlen(temp) + 1);//+1 '\n'문자
+		str[i] = (char*)calloc(strlen(temp) + 1, sizeof(char));
 		strcpy(str[i], temp);
 	}
 
