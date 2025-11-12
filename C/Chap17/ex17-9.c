@@ -10,6 +10,7 @@ int main()
 {
     struct list a = {10, 0}, b = {20, 0}, c = {30, 0};
     struct list* head = &a, *current;
+    //struct list* current;
 
     a.next = &b;
     b.next = &c;
@@ -23,7 +24,7 @@ int main()
     while(current != NULL)
     {
         printf("%d ", current->num);
-        current = current->next;
+        current = current->next;//current++
     }
     printf("\n");
 
