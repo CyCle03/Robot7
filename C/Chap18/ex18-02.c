@@ -6,6 +6,9 @@ int main()
     int ch;
 
     fp = fopen("a.txt", "r");
+    //char* path = "/home/robot/work/basic/a.txt";
+    //fp = fopen(path, "r");
+
     if(fp == NULL)
     {
         printf("파일이 열리지 않았습니다.\n");
@@ -19,7 +22,7 @@ int main()
         {
             break;
         }
-        putchar(ch);
+        putchar(ch);//scanf("%c",ch);
     }
     fclose(fp);//자원(resource) 반납, 반환
 
