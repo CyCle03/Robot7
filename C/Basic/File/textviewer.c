@@ -34,6 +34,7 @@ int main(int argc, char* argv[])
         }
         putchar(ch);//scanf("%c",ch);
     }
+    putchar('\n');
     fclose(fp);//자원(resource) 반납, 반환
 
     return 0;
