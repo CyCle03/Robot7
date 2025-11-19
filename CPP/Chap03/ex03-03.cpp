@@ -18,7 +18,7 @@ public:
         this->radius = r;
         std::cout << "반지름이 " << this->radius << "인 원 생성" << std::endl;
     }
-        Circle(int r, std::string c)
+    Circle(int r, std::string c)
     {
         this->radius = r;
         color = c;
