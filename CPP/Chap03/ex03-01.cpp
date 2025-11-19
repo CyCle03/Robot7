@@ -27,8 +27,7 @@ int main()
 
     Circle pizza;
     pizza.radius = 30;
-    area = pizza.getArea();
-    cout << "pizza 면적은 " << area << endl;
+    cout << "pizza 면적은 " << pizza.getArea() << endl;
 
     return 0;
 }
