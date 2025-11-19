@@ -4,8 +4,9 @@ class Circle
 {
 public:
     int radius;
-
-    double getArea()//생성자
+    //생성자
+    //없으면 컴파일러가 컴파일 시 자동으로 생성
+    double getArea()
     {
         return 3.14*radius*radius;
     }
