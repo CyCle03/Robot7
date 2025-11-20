@@ -48,14 +48,16 @@ int main()
 {
     Cat navi;
     std::cout << "이름 : " << navi.getName() << 
-    ", 성별(0암/1수) : " << navi.getMale() << ", 나이 : " << navi.getAge() << std::endl;
+    ", 성별(0암/1수) : " << navi.getMale() << 
+    ", 나이 : " << navi.getAge() << std::endl;
 
     Cat* hodu = new Cat();
     hodu->setName("호두");
     hodu->setMale(false);
     hodu->setAge(3);
     std::cout << "이름 : " << hodu->getName() << 
-    ", 성별(0암/1수) : " << hodu->getMale() << ", 나이 : " << hodu->getAge() << std::endl;
+    ", 성별(0암/1수) : " << hodu->getMale() << 
+    ", 나이 : " << hodu->getAge() << std::endl;
 
     delete hodu;
 
