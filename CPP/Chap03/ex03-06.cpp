@@ -9,10 +9,10 @@ public:
     Rectangle(): width(1), height(1)
     {}
 
-    Rectangle(int width) : width(width), height(width)
+    Rectangle(int _width) : width(_width), height(_width)
     {}
 
-    Rectangle(int width, int height) : width(width), height(height)
+    Rectangle(int _width, int _height) : width(_width), height(_height)
     {}
 
     bool isSquare()
