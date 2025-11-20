@@ -9,7 +9,7 @@ public:
     Rectangle(): width(1), height(1)
     {}
 
-    Rectangle(int _width) : width(_width), height(_width)
+    Rectangle(int length) : width(length), height(length)
     {}
 
     Rectangle(int _width, int _height) : width(_width), height(_height)
