@@ -5,6 +5,11 @@
 class Circle
 {
 public:
+    int radius;
+    Circle(int r)
+    {
+        radius = r;
+    }
     void draw()
     {
         std::cout << "원을 그리다." << std::endl;
@@ -26,7 +31,7 @@ int main()
 
     //c++11 smartpointer
     std::unique_ptr<int> p3 = std::make_unique<int>(5);
-    std::unique_ptr<Circle> p4 = std::make_unique<Circle>();
+    std::unique_ptr<Circle> p4 = std::make_unique<Circle>(10);
     p4->draw();
     
     return 0;
