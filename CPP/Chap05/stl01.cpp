@@ -12,7 +12,7 @@ void mySwap(T &a, T &b)
 
 int main()
 {
-    int a = 4, b = 5;
+    int a = 4, b = 5;// int가 아닌 double, char 어느 변수라도 가능
     mySwap(a, b);
 
     cout << "a: " << a << " b: " << b << endl;
