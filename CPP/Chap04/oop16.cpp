@@ -43,6 +43,7 @@ int main()
     for(Hero* p : list)
     {
         p->attack();
+        delete p;
     }
 
     
