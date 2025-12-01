@@ -9,7 +9,7 @@ class Account
   private:
     int id;
     string name;
-    int balance;
+    int balance = 0;
 public:
     Account(int id, const string& name, int balance)
     {
