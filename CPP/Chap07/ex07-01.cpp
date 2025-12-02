@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Rect;
+class Rect;//전방 선언
 bool equals(Rect r, Rect s);//함수 선언
 
 class Rect
