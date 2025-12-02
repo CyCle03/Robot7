@@ -12,22 +12,31 @@ public:
     {
         cout << "kick: " << kick << ", punch: " << punch << endl;
     }
-    Power operator- (Power other)
+    Power operator+ (Power other)
     {
         Power temp;
         temp.kick = this->kick + other.kick;
         temp.punch = this->punch + other.punch;
         return temp;
     }
+    Power operator- (Power other)
+    {
+        Power temp;
+        temp.kick = this->kick - other.kick;
+        temp.punch = this->punch - other.punch;
+        return temp;
+    }
 };
 
 int main()
 {
-    Power a(3,5), b(4,6), c;
-    c = a - b; // b.operator-(a) 호출
+    Power a(3,5), b(4,6), c, d;
+    c = a + b; // a.operator+(b) 호출
+    d = b - a; // b.operator-(a) 호출
     a.show();
     b.show();
     c.show();
+    d.show();
 
     return 0;
 }
