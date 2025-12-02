@@ -28,6 +28,9 @@ int main()
     lee.addMoney(200);
     lee.addShared(200);
 
+    Person::sharedMoney = 300;
+    Person::addShared(100);
+
     cout << han.money << ' ' << lee.money << endl;
     cout << han.sharedMoney << ' ' << lee.sharedMoney << endl;
 
