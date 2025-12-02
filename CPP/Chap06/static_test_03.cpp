@@ -13,6 +13,7 @@ public:
     // }
     static int getStaticMoney()
     {
+        //this->staticMoney; // Error: cannot use 'this' pointer in a static member function
         return staticMoney; // Correct: accessing static member 'staticMoney'
     }
     void setMoney(int money)
@@ -28,6 +29,8 @@ public:
 
 int main()
 {
+    int n = PersonError::getStaticMoney();
+
     PersonError pr;
     pr.setMoney(10000);
     cout << "Money: " << pr.getMoney() << endl;
