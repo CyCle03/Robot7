@@ -30,6 +30,7 @@ void paint(Shape& p)
 
 int main()
 {
+    //Shape s; // 오류: 추상 클래스는 인스턴스화할 수 없다.
     Circle c;
     Rect r;
     Line l;
