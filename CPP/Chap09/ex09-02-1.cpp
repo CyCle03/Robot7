@@ -26,18 +26,27 @@ public:
     void draw() override { cout << "Line을 그린다." << endl; }
 };
 
-void paint(Shape* p)
+// void paint(Shape* p)
+// {
+//     p->draw();
+
+//     delete p;
+// }
+
+void paint(unique_ptr<Shape> p)//auto 사용 가능
 {
     p->draw();
-    
-    delete p;
 }
 
 int main()
 {
-    paint(new Circle());
-    paint(new Rect());
-    paint(new Line());
+    // paint(new Circle());
+    // paint(new Rect());
+    // paint(new Line());
+
+    paint(make_unique<Circle>());
+    paint(make_unique<Rect>());
+    paint(make_unique<Line>());
 
     return 0;
 }
