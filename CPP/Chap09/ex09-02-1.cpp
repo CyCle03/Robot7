@@ -33,9 +33,14 @@ public:
 //     delete p;
 // }
 
-void paint(unique_ptr<Shape> p)//auto 사용 가능
+// void paint(unique_ptr<Shape> p)//auto 사용 가능
+// {
+//     p->draw();
+// }
+
+void paint(Shape& p)
 {
-    p->draw();
+    p.draw();
 }
 
 int main()
@@ -44,9 +49,16 @@ int main()
     // paint(new Rect());
     // paint(new Line());
 
-    paint(make_unique<Circle>());
-    paint(make_unique<Rect>());
-    paint(make_unique<Line>());
+    // paint(make_unique<Circle>());
+    // paint(make_unique<Rect>());
+    // paint(make_unique<Line>());
+
+    Circle c;
+    Rect r;
+    Line l;
+    paint(c);
+    paint(r);
+    paint(l);
 
     return 0;
 }
