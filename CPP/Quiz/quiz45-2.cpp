@@ -60,13 +60,15 @@ public:
 
 int main()
 {
-    vector<unique_ptr<Hero>> heroes;
+    vector<Hero*> heroes;
+
     unique_ptr<Hero> knight = make_unique<Knight>();
     unique_ptr<Hero> archer = make_unique<Archer>();
     unique_ptr<Hero> wizard = make_unique<Wizard>();
-    heroes.push_back(move(knight));
-    heroes.push_back(move(archer));
-    heroes.push_back(move(wizard));
+
+    heroes.push_back(knight.get());
+    heroes.push_back(archer.get());
+    heroes.push_back(wizard.get());
 
     // knight->attack();
     // archer->attack();
