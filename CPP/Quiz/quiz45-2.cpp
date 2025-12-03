@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <memory>
+#include <vector>
 using namespace std;
 
 class Hero
@@ -59,13 +60,22 @@ public:
 
 int main()
 {
+    vector<unique_ptr<Hero>> heroes;
     unique_ptr<Hero> knight = make_unique<Knight>();
     unique_ptr<Hero> archer = make_unique<Archer>();
     unique_ptr<Hero> wizard = make_unique<Wizard>();
+    heroes.push_back(move(knight));
+    heroes.push_back(move(archer));
+    heroes.push_back(move(wizard));
 
-    knight->attack();
-    archer->attack();
-    wizard->attack();
+    // knight->attack();
+    // archer->attack();
+    // wizard->attack();
     
+    for(const auto& hero : heroes)
+    {
+        hero->attack();
+    }
+
     return 0;
 }
