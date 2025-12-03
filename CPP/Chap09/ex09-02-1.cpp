@@ -29,6 +29,8 @@ public:
 void paint(Shape* p)
 {
     p->draw();
+    
+    delete p;
 }
 
 int main()
