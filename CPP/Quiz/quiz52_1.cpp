@@ -11,7 +11,7 @@ public:
 
 class FireMagic : public MagicStrategy
 {
-    public:
+public:
     void cast() override
     {
         cout << "화염 마법을 시전합니다!" << endl;
@@ -20,7 +20,7 @@ class FireMagic : public MagicStrategy
 
 class IceMagic : public MagicStrategy
 {
-    public:
+public:
     void cast() override
     {
         cout << "얼음 마법을 시전합니다!" << endl;
