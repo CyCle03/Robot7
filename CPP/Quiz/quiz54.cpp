@@ -45,6 +45,12 @@ public:
     }
 };
 
+void sortAddressbook(vector<Person>& addressbook)
+{
+    sort(addressbook.begin(), addressbook.end()
+    , [](const Person& a, const Person& b) { return a.getId() < b.getId();});
+}
+
 int main()
 {
     vector<Person> addressbook;
@@ -92,6 +98,8 @@ int main()
 
                 auto p = make_unique<Person>(id, name, pnumber);
                 addressbook.push_back(*p);
+
+                sortAddressbook(addressbook);
 
                 break;
             }
