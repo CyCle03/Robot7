@@ -14,5 +14,20 @@ def find_duplicates_fix(nlist):
             flist.append(i)
     return flist
 
+def find_duplicates_sort(nlist):
+    flist = []
+    nlist.sort()
+    check = None
+    change = False
+    for i in nlist:
+        if(check == i) and change == True:
+            flist.append(i)
+            change = False
+        else:
+            check = i
+            change = True
+    return flist
+
 print(find_duplicates(numbers))
 print(find_duplicates_fix(numbers))
+print(find_duplicates_sort(numbers))
