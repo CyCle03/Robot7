@@ -15,10 +15,11 @@ name2 = list("가개객갱갹거건걸검겁게격견결겸경계고곡곤골공
                  "하학한할함합항해핵행향허헌헐험혁현혈혐협형혜호혹혼홀홍화확환활황회획횡효후훈훌훙훤훼휘휴휼흉흑흔흘흠흡흥희히힐")
 
 with open("students.csv", "w") as file:
+    file.write("id,name,math,english\n")
     for i in range(1000):
         id = i + 1
         name = random.choice(name1) + random.choice(name2) + random.choice(name2)
         math = random.randrange(101)
-        english = random.randrange(101)
+        english = random.randrange(40, 101)
 
         file.write(f"{id}, {name}, {math}, {english}\n")
