@@ -1,6 +1,7 @@
+#import urllib
+#import urllib.request
 from urllib import request
 
-target = request.urlopen('https://google.com')
-output = target.read()
+target = request.urlopen('https://google.com').read()
 
-print(output)
+print(target)
