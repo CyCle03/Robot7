@@ -25,6 +25,9 @@ class Student:
     def printInfo(self):
         print(f'{self.__id}, {self.__name}, {self.__pnumber}')
 
+    def __str__(self):
+        return '{} / {} / {}\n'.format(self.__id, self.__name, self.__pnumber)
+
 student1 = Student(1, '홍길동', '010-1111-1111')
 print(f'{student1.getId()}, {student1.getName()}, {student1.getPnumber()}')
 
@@ -34,3 +37,5 @@ student1.setPnumber('010-1234-5678')
 student1.printInfo()
 
 student1.study()
+
+print(str(student1))
