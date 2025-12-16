@@ -155,3 +155,20 @@ SELECT
     END AS '월'
 FROM BirthdayView;
 
+SELECT strftime('%Y-%m-%d %H:%M:%S', 'now', 'localtime') 현지시간;
+
+SELECT strftime('%m/%d %H:%M', 'now', 'localtime') 현지시간;
+
+SELECT 
+	Name,
+	Birthday AS 생일,
+	strftime('%Y', 'now') - substr(Birthday, 1, 4) - 
+	(strftime('%m-%d', 'now') < substr(Birthday, 6)) AS 만나이
+FROM Person;
+
+SELECT
+	Name,
+	Birthday,
+	(CAST(strftime('%Y', 'now') AS INTEGER) -
+	CAST(substr(Birthday, 1, 4) AS INTEGER)) AS '만나이'
+FROM Person;
