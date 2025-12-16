@@ -172,3 +172,16 @@ SELECT
 	(CAST(strftime('%Y', 'now') AS INTEGER) -
 	CAST(substr(Birthday, 1, 4) AS INTEGER)) AS '만나이'
 FROM Person;
+
+SELECT Height FROM Person;
+
+SELECT count(Height) FROM Person;
+SELECT max(Height) FROM Person;
+SELECT min(Height) FROM Person;
+SELECT avg(Height) FROM Person;
+SELECT sum(Height) FROM Person;
+
+SELECT
+	count(Height), max(Height),
+	min(Height), avg(Height), sum(Height)
+FROM Person;
