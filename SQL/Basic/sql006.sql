@@ -81,3 +81,11 @@ FROM Person;
 SELECT 
 	substr('201225-1234567', 3, 4) AS "생일",
 	substr('201225-1234567', 1, 2) AS "태어난 년도";
+
+SELECT 
+	Name,
+	Birthday AS bdate,
+	substr(Birthday, 1, 4) AS "YYYY",
+	substr(Birthday, 6, 2) AS "MM",
+	substr(Birthday, 9, 2) AS "DD"
+FROM Person;	
