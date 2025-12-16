@@ -45,3 +45,9 @@ SELECT dept, count(*)
 FROM employees
 GROUP BY dept
 HAVING count(*) > 3;
+
+SELECT job, avg(salary)
+FROM employees
+GROUP BY job
+HAVING avg(salary) >= 6000;
+
