@@ -39,9 +39,9 @@ GROUP BY dept;
 SELECT dept, round(avg(salary),2)
 FROM employees
 GROUP BY dept
-HAVING avg(salary) >=5000;
+HAVING avg(salary) >= 5000;
 
 SELECT dept, count(*)
 FROM employees
 GROUP BY dept
-HAVING count(*) >3;
+HAVING count(*) > 3;
