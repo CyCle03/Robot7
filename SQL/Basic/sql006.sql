@@ -114,3 +114,44 @@ SELECT
 FROM Person;
 
 SELECT * FROM ShowBMI;
+
+SELECT
+    Name,
+    bdate,
+    MM,
+    CASE
+        WHEN MM = '01' THEN 'Jan.'
+        WHEN MM = '02' THEN 'Feb.'
+        WHEN MM = '03' THEN 'Mar.'
+        WHEN MM = '04' THEN 'Apr.'
+        WHEN MM = '05' THEN 'May.'
+        WHEN MM = '06' THEN 'Jun.'
+        WHEN MM = '07' THEN 'Jul.'      
+        WHEN MM = '08' THEN 'Aug.'
+        WHEN MM = '09' THEN 'Sep.'
+        WHEN MM = '10' THEN 'Oct.'
+        WHEN MM = '11' THEN 'Nov.'
+        WHEN MM = '12' THEN 'Dec.'
+    END Month
+FROM BirthdayView;
+
+SELECT
+    Name,
+    bdate,
+    MM,
+    CASE
+        WHEN MM='01' THEN '1월'
+		WHEN MM='02' THEN '2월'
+		WHEN MM='03' THEN '3월'
+		WHEN MM='04' THEN '4월'
+		WHEN MM='05' THEN '5월'
+		WHEN MM='06' THEN '6월'
+		WHEN MM='07' THEN '7월'
+		WHEN MM='08' THEN '8월'
+		WHEN MM='09' THEN '9월'
+		WHEN MM='10' THEN '10월'
+		WHEN MM='11' THEN '11월'
+		WHEN MM='12' THEN '12월'
+    END AS '월'
+FROM BirthdayView;
+
