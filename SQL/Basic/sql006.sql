@@ -88,4 +88,29 @@ SELECT
 	substr(Birthday, 1, 4) AS "YYYY",
 	substr(Birthday, 6, 2) AS "MM",
 	substr(Birthday, 9, 2) AS "DD"
-FROM Person;	
+FROM Person;
+
+CREATE VIEW BirthdayView
+AS
+SELECT 
+	Name,
+	Birthday AS bdate,
+	substr(Birthday, 1, 4) AS "YYYY",
+	substr(Birthday, 6, 2) AS "MM",
+	substr(Birthday, 9, 2) AS "DD"
+FROM Person;
+
+SELECT * FROM BirthdayView;
+
+DROP VIEW BirthdayView;
+
+CREATE VIEW ShowBMI
+AS
+SELECT 
+	Name AS "이름",
+	Height AS "키",
+	Weight AS "몸무게",
+	Height - 110 AS "적정몸무게"
+FROM Person;
+
+SELECT * FROM ShowBMI;
