@@ -65,3 +65,19 @@ SELECT
 	weight AS "몸무게",
 	round(weight / (Height * Height * 0.0001), 2) AS BMI
 FROM Person;
+
+UPDATE Person SET Height=163 WHERE ID=1;
+SELECT * FROM Person;
+
+SELECT Height - 110 AS "적정몸무게" FROM Person;
+
+SELECT 
+	Name AS "이름",
+	Height AS "키",
+	Weight AS "몸무게",
+	Height - 110 AS "적정몸무게"
+FROM Person;
+
+SELECT 
+	substr('201225-1234567', 3, 4) AS "생일",
+	substr('201225-1234567', 1, 2) AS "태어난 년도";
