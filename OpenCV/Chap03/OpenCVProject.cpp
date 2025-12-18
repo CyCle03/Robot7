@@ -6,6 +6,6 @@ extern void show2();
 int main()
 {
     std::cout << "OpneCV!\n";
-    show1();
+    //show1();
     show2();
 }
