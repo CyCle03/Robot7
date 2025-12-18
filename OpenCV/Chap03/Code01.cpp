@@ -39,3 +39,21 @@ void show1()
 	cv::waitKey();
 	cv::destroyAllWindows();
 }
+
+void show2()
+{
+	cv::namedWindow("Color");
+	for (int i = 0; i < 256; ++i)
+	{
+		cv::Mat image(512, 512, CV_8UC3, cv::Scalar(i, i, i));// CV_8UC3 == Unsigned 8bit Channel 3
+		cv::imshow("Color", image);
+		cv::waitKey(10);
+	}
+	for (int i = 255; i >= 0; --i)
+	{
+		cv::Mat image(512, 512, CV_8UC3, cv::Scalar(i, i, i));// CV_8UC3 == Unsigned 8bit Channel 3
+		cv::imshow("Color", image);
+		cv::waitKey(10);
+	}
+	cv::waitKey(0);
+}
