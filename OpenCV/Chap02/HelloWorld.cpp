@@ -6,7 +6,7 @@ int main()
     std::cout << "Hello OpenCV!" << CV_VERSION << std::endl;
 
     cv::Mat img; // 객체가 생성자를 호출해서 만들어 짐.
-    img = cv::imread("lenna.png");
+    img = cv::imread("lenna.png"); //img = cv::imread("lenna.png", cv::IMREAD_GRAYSCALE);
 
     if (img.empty())
     {
