@@ -226,9 +226,13 @@ void show19()
 	cv::Mat src = cv::imread("airplane.bmp");
 	cv::Mat mask = cv::imread("mask_plane.bmp");
 	cv::Mat dst = cv::imread("field.bmp");
-	src.setTo(cv::Scalar(0, 255, 0), mask);
-	cv::imshow("LENNA", src);
+	cv::Scalar total_pixel = cv::sum(src)(0);
+	std::cout << "총 픽셀은 : " << total_pixel(0) << std::endl;
+	cv::imshow("DST", dst);
+	src.copyTo(dst, mask);
+	cv::imshow("Original", src);
 	cv::imshow("MASK", mask);
+	cv::imshow("Destination", dst);
 	cv::waitKey();
 	cv::destroyAllWindows();
 }
