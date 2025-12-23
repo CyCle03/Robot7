@@ -20,6 +20,8 @@ extern void show18();
 extern void show19();
 extern void show20();
 extern void show21();
+extern void show22();
+extern void show23();
 #include <iostream>
 
 int main()
@@ -45,5 +47,7 @@ int main()
     //show18();
     //show19();
     //show20();
-    show21();
+    //show21();
+    //show22();
+    show23();
 }
