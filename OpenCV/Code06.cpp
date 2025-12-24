@@ -110,3 +110,63 @@ void show38()
 	cv::waitKey();
 	cv::destroyAllWindows();
 }
+
+void show39()
+{
+	cv::Mat src = cv::imread("eastsea.bmp");
+	cv::imshow("SRC", src);
+
+	cv::Mat dst;
+	cv::flip(src, dst, 1); // y축 대칭(좌우 대칭)
+	cv::imshow("좌우 대칭", dst);
+
+	cv::flip(src, dst, 0); // x축 대칭(상하 대칭)
+	cv::imshow("상하 대칭", dst);
+
+	cv::flip(src, dst, -1); // x,y축 대칭(원점 대칭)
+	cv::imshow("원점 대칭", dst);
+
+	cv::waitKey();
+	cv::destroyAllWindows();
+}
+
+static int count = 0;
+static cv::Point2f dstQuad[4];
+static cv::Point2f srcQuad[4];
+static cv::Mat src;
+
+void on_mouse2(int event, int x, int y, int flag, void* userdata)
+{
+	if (event == cv::EVENT_LBUTTONDOWN)
+	{
+		if (count < 4)
+		{
+			srcQuad[count++] = cv::Point2f(x, y);
+			cv::circle(src, cv::Point(x, y), 5, cv::Scalar(0, 0, 255), -1);
+			cv::imshow("SRC", src);
+		}
+		if (count == 4)
+		{ 
+			int width = 200;
+			int height = 300;
+			dstQuad[0] = cv::Point2f(0, 0);
+			dstQuad[1] = cv::Point2f(width - 1, 0);
+			dstQuad[2] = cv::Point2f(width - 1, height - 1);
+			dstQuad[3] = cv::Point2f(0, height - 1);
+			cv::Mat move = cv::getPerspectiveTransform(srcQuad, dstQuad);
+			cv::Mat dst;
+			cv::warpPerspective(src, dst, move, cv::Size(width, height));
+			cv::imshow("DST", dst);
+		}
+	}
+}
+
+void show40()
+{
+	src = cv::imread("Card.bmp");
+	cv::namedWindow("SRC");
+	cv::setMouseCallback("SRC", on_mouse2);
+	cv::imshow("SRC", src);
+	cv::waitKey();
+	cv::destroyAllWindows();
+}
