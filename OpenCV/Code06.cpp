@@ -12,6 +12,26 @@ void show33()
 	dstPts[0] = cv::Point2f(50.0f, 50.0f);
 	dstPts[1] = cv::Point2f(src.cols - 100.0f, 100.f);
 	dstPts[2] = cv::Point2f(src.cols - 50.f, src.rows - 50.f);
+	cv::Mat move = cv::getAffineTransform(srcPts, dstPts);
+	cv::Mat dst;
+	cv::warpAffine(src, dst, move, cv::Size());
+	cv::imshow("DST", dst);
+	cv::waitKey();
+	cv::destroyAllWindows();
+}
+
+void show34()
+{
+	cv::Mat src = cv::imread("tekapo.bmp");
+	cv::Mat move1 = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.0f, 150.f, 0.0f, 1.0f, 100.f });
+	cv::Mat move2 = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f });
+	cv::Mat move3 = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.0f, 0.0f, 0.2f, 1.0f, 0.0f });
+	cv::Mat dst;
+
+	cv::warpAffine(src, dst, move3, src.size());
+	cv::imshow("SRC", src);
+	cv::imshow("DST", dst);
+
 	cv::waitKey();
 	cv::destroyAllWindows();
 }
