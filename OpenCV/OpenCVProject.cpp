@@ -33,6 +33,16 @@ extern void show31();
 extern void show32();
 extern void show33();
 extern void show34();
+extern void show35();
+extern void show36();
+extern void show37();
+extern void show38();
+extern void show39();
+extern void show40();
+extern void show41();
+extern void show42();
+extern void show43();
+extern void show44();
 
 extern void yaku1();
 #include <iostream>
@@ -73,7 +83,17 @@ int main()
     //show31();
     //show32();
     //show33();
-    show34();
-    
+    //show34();
+    //show35();
+    //show36();
+    //show37();
+    //show38();
+    //show39();
+    //show40();
+    //show41();
+    //show42();
+    //show43();
+    show44();
+
     //yaku1();
 }
