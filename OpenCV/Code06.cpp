@@ -23,12 +23,29 @@ void show33()
 void show34()
 {
 	cv::Mat src = cv::imread("tekapo.bmp");
-	cv::Mat move1 = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.0f, 150.f, 0.0f, 1.0f, 100.f });
-	cv::Mat move2 = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f });
-	cv::Mat move3 = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.0f, 0.0f, 0.2f, 1.0f, 0.0f });
+	cv::Mat move = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.0f, 150.f, 0.0f, 1.0f, 100.f });
 	cv::Mat dst;
 
-	cv::warpAffine(src, dst, move3, src.size());
+	cv::warpAffine(src, dst, move, src.size());
+	cv::imshow("SRC", src);
+	cv::imshow("DST", dst);
+
+	cv::waitKey();
+	cv::destroyAllWindows();
+}
+
+void show35()
+{
+	float m;
+	std::cout << "전단 변환 할 값(m)을 입력하세요.(1.0 이하 추천): ";
+	std::cin >> m;
+
+	cv::Mat src = cv::imread("tekapo.bmp");
+	cv::Mat move1 = cv::Mat_<float>({ 2, 3 }, { 1.0f, m, 0.0f, 0.0f, 1.0f, 0.0f });
+	cv::Mat move2 = cv::Mat_<float>({ 2, 3 }, { 1.0f, 0.0f, 0.0f, m, 1.0f, 0.0f });
+	cv::Mat dst;
+
+	cv::warpAffine(src, dst, move1, cv::Size(cvRound(src.cols + src.rows * m), cvRound(src.rows + src.cols * m)));
 	cv::imshow("SRC", src);
 	cv::imshow("DST", dst);
 
