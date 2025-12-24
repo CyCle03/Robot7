@@ -69,3 +69,44 @@ void show36()
 	cv::waitKey();
 	cv::destroyAllWindows();
 }
+
+void show37()
+{
+	cv::Mat src = cv::imread("rose.bmp");
+	if (src.empty())
+	{
+		std::cerr << "Image load failed!\n";
+		return;
+	}
+
+	cv::Mat dst1, dst2, dst3, dst4;
+	cv::resize(src, dst1, cv::Size(), 4, 4, cv::INTER_NEAREST);
+	cv::resize(src, dst2, cv::Size(1920, 1080));
+	cv::resize(src, dst3, cv::Size(1920, 1080), 0, 0, cv::INTER_CUBIC);
+	cv::resize(src, dst4, cv::Size(1920, 1080), 0, 0, cv::INTER_LANCZOS4);
+
+	cv::imshow("SRC", src);
+	cv::imshow("dst1", dst1(cv::Rect(400, 500, 400, 400)));
+	cv::imshow("dst2", dst2(cv::Rect(400, 500, 400, 400)));
+	cv::imshow("dst3", dst3(cv::Rect(400, 500, 400, 400)));
+	cv::imshow("dst4", dst4(cv::Rect(400, 500, 400, 400)));
+
+	cv::waitKey();
+	cv::destroyAllWindows();
+}
+
+void show38()
+{
+	cv::Mat src = cv::imread("tekapo.bmp");
+	cv::Point2f center(src.cols / 1, src.rows / 2);
+	// 2x3 affine
+	cv::Mat move = cv::getRotationMatrix2D(center, 20.0, 1.0);
+	cv::Mat dst;
+	cv::warpAffine(src, dst, move, cv::Size());
+
+	cv::imshow("SRC", src);
+	cv::imshow("DST", dst);
+
+	cv::waitKey();
+	cv::destroyAllWindows();
+}
