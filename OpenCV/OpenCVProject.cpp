@@ -46,6 +46,12 @@ extern void show44();
 extern void show45();
 extern void show46();
 extern void show47();
+extern void show48();
+extern void show49();
+extern void show50();
+extern void show51();
+extern void show52();
+extern void runProject();
 
 extern void yaku1();
 #include <iostream>
@@ -99,7 +105,13 @@ int main()
     //show44();
     //show45();
     //show46();
-    show47();
+    //show47();
+    //show48();
+    //show49();
+    //show50();
+    //show51();
+    //show52();
+    runProject();
 
     //yaku1();
 }
