@@ -52,6 +52,7 @@ extern void show50();
 extern void show51();
 extern void show52();
 extern void runProject();
+extern void runMyProject();
 
 extern void yaku1();
 #include <iostream>
@@ -111,7 +112,8 @@ int main()
     //show50();
     //show51();
     //show52();
-    runProject();
+    //runProject();
+    runMyProject();
 
     //yaku1();
 }
