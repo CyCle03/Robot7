@@ -99,6 +99,15 @@ void runMyProject() CV_NOEXCEPT
 				pic.flipped = !pic.flipped;
 				if (rand() % 2 == 0)
 					pic.inverted = !pic.inverted;
+				int opcl = rand() % 10;// rand or score 기반으로
+				if (opcl == 0)
+				{
+
+				}
+				else if (opcl < 3)
+				{
+
+				}
 				pic.position = getRandomPosition(width, height, pic.radius);
 				countdown = now + COOLDOWN;
 				
