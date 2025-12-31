@@ -2,6 +2,12 @@
 #include <iostream>
 #include <ctime>
 #include <vector>
+#include <algorithm>
+#define NOMINMAX
+#include <windows.h>
+#include <mmsystem.h>
+#pragma comment(lib, "winmm.lib")
+
 
 struct Picture
 {
@@ -84,6 +90,9 @@ void runMyProject() CV_NOEXCEPT
 			int area = (pic.radius * 2) * (pic.radius * 2);
 			if (movementPixels > area * 0.1 and countdown <= now)
 			{
+				PlaySound(NULL, 0, 0);
+				PlaySound(TEXT("touch.wav"), NULL, SND_FILENAME | SND_ASYNC);
+
 				std::cout << "터치 " << ++score << "\r\n";
 				if(pic.radius < 50)
 				{
