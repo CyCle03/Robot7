@@ -27,11 +27,11 @@ def capture_and_predict(roi, load_model):
     gaussian_blur = cv2.GaussianBlur(gray_image, (5, 5), 3)
     # 2진화
     _, otsu_thread = cv2.threshold(gaussian_blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    #cv2.imshow("otsu_thread", otsu_thread)
+    cv2.imshow("otsu_thread", otsu_thread)
     # Morph, 전처리
     kernel = np.ones((5, 5), np.uint8)
     erosion = cv2.erode(otsu_thread, kernel, iterations=3)
-    #cv2.imshow("erosion", erosion)
+    cv2.imshow("erosion", erosion)
     #cv2.imwrite("digit_binary_image.png", erosion)
     # 이미지 자르기
     img = erosion
@@ -48,16 +48,16 @@ def capture_and_predict(roi, load_model):
     y2 = min(h, y2)
 
     cropped_img = img[y1:y2, x1:x2]
-    #cv2.imshow("cropped_img", cropped_img)
+    cv2.imshow("cropped_img", cropped_img)
 
     # 이미지 반전
     reversed_img = cv2.bitwise_not(cropped_img)
-    #cv2.imshow("reversed_img", reversed_img)
+    cv2.imshow("reversed_img", reversed_img)
     #cv2.imwrite("reversed_img.png", reversed_img)
 
     # 28 x 28 resize
     resized_img = cv2.resize(reversed_img, (28, 28))
-    #cv2.imshow("resized_img", resized_img)
+    cv2.imshow("resized_img", resized_img)
     #cv2.imwrite("IMAGE_FOR_TEST.png", resized_img)
 
     # 학습된 모델에 전처리 후 입력
@@ -86,7 +86,7 @@ while True:
     line_gap = 30     # 줄 간격
     for i, h in enumerate(history[-12:]):
         cv2.putText(flip_frame, h, (20, start_y + i * line_gap), cv2.FONT_HERSHEY_PLAIN,
-                    1.3, (255, 0, 0), 2 )
+                    1.1, (255, 0, 0), 1 )
     cv2.imshow("Webcam", flip_frame)
     # 화면 캡쳐를 위한 키 값 받기
     key = cv2.waitKey(1) & 0xFF
@@ -99,6 +99,8 @@ while True:
             #print("최종 입력:", digits)
             if digits == password:
                 cv2.putText(flip_frame, "Correct", (20, 70),
+                    cv2.FONT_HERSHEY_PLAIN, 2, (0, 255, 0), 2)
+                cv2.putText(flip_frame, f"{password}", (20, 140),
                     cv2.FONT_HERSHEY_PLAIN, 2, (0, 255, 0), 2)
                 cv2.imshow("Webcam", flip_frame)
                 cv2.waitKey(1000)
